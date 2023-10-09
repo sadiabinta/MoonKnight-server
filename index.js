@@ -28,7 +28,7 @@ async function run() {
 
     const jewelryCollection = client.db("ArrosaDb").collection("jewelry");
 
-    app.get('/jewelry',async(req,res)=>{
+    app.get('jewelry',async(req,res)=>{
         const result=await jewelryCollection.find().toArray();
         res.send(result); 
     })
